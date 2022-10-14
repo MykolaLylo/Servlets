@@ -1,4 +1,4 @@
-<%@ page contentType = "text/html; charset = UTF-8" language = "java" %>
+<%@ page contentType="text/html;charset = UTF-8" language="java" %>
 <html>
 <head>
     <title>journal_shop</title>
@@ -43,7 +43,7 @@
                   <a href="register.jsp">Register</a>
                   </button>
                 </span>
-                <button style = "display: <%= name != null ? "inline" : "none"%>" type "button" class = "btn btn-warning">
+                <button style = "display: <%= name != null ? "inline" : "none"%>" type = "button" class = "btn btn-warning">
                    <a href = "logout">Logout</a>
                 </button>
                 </div>

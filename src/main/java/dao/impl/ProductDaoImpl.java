@@ -13,14 +13,14 @@ import java.util.Optional;
 public class ProductDaoImpl implements ProductDao {
     private final Connection connection;
     public ProductDaoImpl(){
-        connection = new MySQLConnector().getConnection();
+        this.connection = new MySQLConnector().getConnection();
     }
 
     @Override
     public void save(Product product) throws SQLException {
         PreparedStatement statement = connection.prepareStatement("insert into product values(?,?,?,?,?)");
-        statement.setInt(1,product.getProduct_id());
-        statement.setString(2, product.getProduct_name());
+        statement.setInt(1,product.getProductId());
+        statement.setString(2, product.getProductName());
         statement.setString(3, product.getDescription());
         statement.setDouble(4,product.getPrice());
         statement.setString(5, product.getImage());
@@ -30,7 +30,7 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public List<Product> getAll() throws SQLException {
-        Statement statement = connection.createStatement();
+        Statement statement = this.connection.createStatement();
         ResultSet resultSet = statement.executeQuery("select * from product");
         return ProductMapper.mapProductFromResulSet(resultSet);
     }

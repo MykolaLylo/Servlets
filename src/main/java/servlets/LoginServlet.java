@@ -38,7 +38,5 @@ public class LoginServlet extends HttpServlet {
             e.printStackTrace();
             resp.sendRedirect("login.jsp?error=error");
         }
-
-
     }
 }

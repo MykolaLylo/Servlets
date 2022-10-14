@@ -1,13 +1,15 @@
-const PRODUCT_ENDPOINT = "product"
-const createCard= (product) =>`
+const PRODUCT_ENDPOINT ="http://localhost:8080/Servlets_war_exploded/product"
+const createCard= (product) => `
 <div class="col">
 <div class="card shadow-sm"> 
  <img src="${product.image}" alt="product" width="250px" height="250px"> 
  <div class="card-body">
-    <p class="card-text" style="font-size: 20px">${product.product_name}</p>
+    <p class="card-text" style="font-size: 20px">${product.productName}</p>
     <div class="d-flex justify-content-between align-items-center">
       <div class="btn-group">
+        <a href="product?product_id=${product.productId}">
         <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+        </a>
         <button type="button" class="btn btn-sm btn-outline-success">
          <i class="fa-sharp fa-solid fa-basket-shopping"></i>
         </button>

@@ -1,4 +1,4 @@
-<%@ page contentType = "text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
         <title>Create product</title>
@@ -10,10 +10,10 @@
         <h2 style="text-align: center;">create new product</h2>
 
         <div style="margin: 16px;">
-            <form  onsubmit = "saveProduct(event)">
+            <form onsubmit="saveProduct(event)">
                 <div class="mb-3">
-                    <label for="product_name" class="form-label">Product name</label>
-                    <input type="text" name="product_name" class="form-control" id="product_name" placeholder="Some product"/>
+                    <label for="productName" class="form-label">Product name</label>
+                    <input type="text" name="productName" class="form-control" id="productName" placeholder="Some product"/>
                   </div>
                   <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Image</label>
-                    <input type="file" name="image" class="form-control" id="image" />
+                    <input type="file" name="image" class="form-control" id="image"/>
                 </div>
                 <div id="alert" hidden="hidden" class="alert alert-danger" role="alert">
                     Oops something went wrong. Please try again
@@ -33,6 +33,6 @@
                 <input type="submit"  class="btn btn-primary"/>
             </form>
         </div>
-        <script src= "./js/product.js"></script>
+        <script src="./js/product.js"></script>
     </body>
 </html>

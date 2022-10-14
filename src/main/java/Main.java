@@ -7,9 +7,16 @@ import services.UserServices;
 import services.impl.ProductServiceImpl;
 import services.impl.UserServiceImpl;
 
+import java.sql.SQLException;
+
 public class Main {
     public static void main(String[] args) throws IncorectCredentialsException {
-        ProductService productService = new ProductServiceImpl(new ProductDaoImpl());
+        ProductDaoImpl productDao = new ProductDaoImpl();
+        try {
+            productDao.getAll();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
